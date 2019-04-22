@@ -1,0 +1,8 @@
+@import "_mixins/font-face.scss";
+
+@include font-face("Lato-st", "../fonts/Lato-Regular/Lato-Regular");
+@include font-face("Lato-st", "../fonts/Lato-Bold/Lato-Bold", bold);
+@include font-face("Lato-st", "../fonts/Lato-Italic/Lato-Italic, italic");
+@include font-face("Montserrat-st", "../fonts/Montserrat-Regular/Montserrat-Regular");
+@include font-face("Montserrat-st", "../fonts/Montserrat-Bold/Montserrat-Bold", 700);
+

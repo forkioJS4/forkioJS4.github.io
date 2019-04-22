@@ -5,45 +5,284 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./dist/img/forkio-favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>StepProject 2-1</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
 
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StepProject 2-1</title>
-    <link rel="stylesheet" href="/build/css/main.css" />
-</head>
-<body>
+<div class="container">
 
-    <page class="container">
+    <div class="header-background">
 
-        <header class="header"> </header>  <!-Вячеслав -->
+        <header class="header max-width-prorerty" id="header">
 
-        <main class="content">
+            <div class="block-logo">
+                <div class="block-logo__pencil"></div>
+                <p class="block-logo__title">forkio</p>
+            </div>
 
-            <section class="product"></section>   <!-Вячеслав -->
+            <nav >
+                <ul class="top-menu">
+                    <li class="top-menu__item" ><a class="top-menu__link" href="#product">Owerview</a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#getnow" >About Fork</a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#testimonials" >Buying Options</a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#pricing" >Support</a></li>
+                </ul>
+            </nav>
 
-            <section class="getnow"></section>  <!-Вячеслав -->
+            <div class="header-button">
+                <button class="button" value="Buy Now" href="#">Buy Now</button>
+            </div>
 
-            <section class="articles"></section>  <!-Владимир -->
+            <div class="menu-hamburger">
 
-            <section class="partners"></section>  <!-Владимир -->
+                <input type="checkbox" class="menu-hamburger__toggler">
 
-            <section class="offer"></section>  <!-Вячеслав -->
+                <div class="menu-hamburger__button">
+                    <div class="menu-hamburger__line"></div>
+                </div>
 
-            <section class="subscribe"></section>  <!-Вячеслав -->
+                <div class="menu-hamburger__wrap1">
+                    <div class="menu-hamburger__wrap2">
+                        <nav class="menu-hamburger__wrap3">
+                            <ul class="menu-hamburger__items">
+                                <li class="menu-hamburger__item" ><a class="menu-hamburger__link" href="#header">Home</a></li>
+                                <li class="menu-hamburger__item" ><a class="menu-hamburger__link" href="#product">Owerview</a></li>
+                                <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="#getnow" >About Fork</a></li>
+                                <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="#testimonials" >Buying Options</a></li>
+                                <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="#pricing" >Support</a></li>
 
-        </main>
+                            </ul>
 
-        <footer class="footer"></footer>  <!-Владимир-->
+                        </nav>
+                    </div>
+                </div>
+            </div>
 
-    </page>
+        </header>
+    </div>
+    <main class="content">
+
+
+        <section class="product" id="product">
+
+            <h1 class="block-title">fork app</h1>
+
+            <p class="product__slogan">A real gamechanger in the world of web-development
+                <span class="product__slogan product__slogan--uppercase">v.2.8 for mac and windows</span>
+            </p>
+
+            <div class="product__image"></div>
+
+        </section>
+
+        <section class="getnow max-width-prorerty" id="getnow">
+
+            <div class="getnow__button">
+                <button class="button button--getnow" value="Download For Free Now" href="#">Download For Free Now</button>
+                <p class="getnow__timelimit">Unlimited 30-Days Trial Period</p>
+
+            </div>
+
+            <h3 class="getnow__title">Revolutionary editor</h3>
+
+            <p class="getnow__text">Aenean cursus imperdiet nisl id fermentum.Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.
+            </p>
+
+            <div class="getnow__visitor">
+                <div class="counter">
+                    <div class="counter__box">
+                        <i class="counter__icon far fa-eye"></i>
+                        <span class="counter__text">Watch</span>
+                    </div>
+
+                    <div class="counter__count">1,397</div>
+                </div>
+                <div class="counter">
+                    <div class="counter__box">
+                        <i class="counter__icon fas fa-star"></i>
+                        <span class="counter__text">Star</span>
+                    </div>
+                    <div class="counter__count">21,038</div>
+                </div>
+                <div class="counter">
+                    <div class="counter__box">
+                        <i class="counter__icon fas fa-code-branch"></i>
+                        <span class="counter__text">Fork</span>
+                    </div>
+                    <div class="counter__count">4,391</div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="sections-background">
+
+            <section class="testimonials max-width-prorerty" id="testimonials">
+
+                <h2 class="block-title block-title--h2">People are talking about fork</h2>
+
+                <div class="articles-box">
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/smashing-magazine-logo.svg" alt="logo-smashing">
+                        </a>
+                        <div class="feadback__text">
+                            <p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+                        </div>
+                    </article>
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/coddrops-color.svg" alt="logo-coddrops">
+                        </a>
+                        <div class="feadback__text">
+                            <p>Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+                        </div>
+                    </article>
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/web-designer-depot.svg" alt="logo-web-designer-depot">
+                        </a>
+                        <div class="feadback__text">
+                            <p>In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla,imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+                        </div>
+                    </article>
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/pixelbuddhanet.svg" alt="logo-pixelbuddhanet">
+                        </a>
+                        <div class="feadback__text">
+                            <p>Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet.Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
+                        </div>
+                    </article>
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/creative-bloq.svg" alt="logo-creative-bloq">
+                        </a>
+                        <div class="feadback__text">
+                            <p>Praesent ut eros tristique, malesuada lectus vel,
+                                lobortis massa. Nulla faucibus lorem id arcu consequat faucibus. </p>
+                        </div>
+                    </article>
+
+                    <article class="feadback">
+                        <a href="#">
+                            <img class="feadback__logo" src="./dist/img/the-next-web-tnw.svg" alt="logo-the-next-web-tnw">
+                        </a>
+                        <div class="feadback__text">
+                            <p>Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="testimonials-footer">
+                    <p>
+                        Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh.
+                        Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </article>
+            </section>
+
+            <section class="pricing max-width-prorerty" id="pricing">
+
+                <h3 class="block-title block-title--h3">Fork Subscription Pricing</h3>
+
+                <div class="tariffs">
+
+                    <div class="tariff">
+                        <div class="tariff__header">
+                            <h4 class="tariff__title">students</h4>
+                        </div>
+
+                        <h4 class="tariff__currency">$<span class="tariff__price">29</span></h4>
+
+                        <p class="tariff__desc">per month</p>
+
+                        <ul class="tariff__license">
+                            <li>Personal license</li>
+                        </ul>
+
+                        <div class="tariff__button">
+                            <button class="button button--tariff" href="">purchase</button>
+                        </div>
+                    </div>
+
+                    <div class="tariff">
+                        <div class="tariff__header">
+                            <h4 class="tariff__title">professional</h4>
+                        </div>
+
+                        <h4 class="tariff__currency">$<span class="tariff__price">59</span></h4>
+
+                        <p class="tariff__desc">per month</p>
+
+                        <ul class="tariff__license">
+                            <li>professional license</li>
+                            <li>Email Support</li>
+                        </ul>
+
+                        <div class="tariff__button">
+                            <button class="button button--tariff" href="">purchase</button>
+                        </div>
+                    </div>
+
+                    <div class="tariff tariff--selected">
+                        <div class="tariff__header tariff__header--selected">
+                            <h4 class="tariff__title">agency</h4>
+                        </div>
+
+                        <h4 class="tariff__currency tariff__currency--selected">$<span class="tariff__price">99</span></h4>
+
+                        <p class="tariff__desc tariff__desc--selected">per month</p>
+
+                        <ul class="tariff__license">
+                            <li>1-12 team members</li>
+                            <li>phone support</li>
+                        </ul>
+
+                        <div class="tariff__button tariff__button--selected">
+                            <button class="button button--tariff" href="">purchase</button>
+                        </div>
+                    </div>
+
+
+                    <div class="tariff">
+                        <div class="tariff__header">
+                            <h4 class="tariff__title">enterprice</h4>
+                        </div>
+
+                        <h4 class="tariff__currency">$<span class="tariff__price">159</span></h4>
+
+                        <p class="tariff__desc">per month</p>
+
+                        <ul class="tariff__license">
+                            <li>Unlimited team members </li>
+                            <li>27/7 phone support</li>
+                        </ul>
+
+                        <div class="tariff__button">
+                            <button class="button button--tariff" href="">purchase</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+</div>
+
 
 </body>
 </html>

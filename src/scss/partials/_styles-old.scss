@@ -1,0 +1,91 @@
+.container {
+  padding: 60px 100px 0;
+}
+
+.logo {
+  margin: 20px 0;
+
+  &__text {
+    font-size: 80px;
+
+    &--blue {
+      color: $text-blue;
+    }
+  }
+}
+
+.nav {
+  margin: 30px 0;
+
+  &__menu {
+    margin: 0 auto;
+    background-color: $background-darker;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    line-height: 69px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+
+    &:hover {
+      background-color: $background-dark;
+      border-right-color: #fff;
+      border-left-color: #fff;
+    }
+  }
+
+  &__link {
+    padding: 0 26px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  &--footer {
+    .nav__menu {
+      background-color: $background-grey;
+      text-align: left;
+    }
+
+    .nav__item {
+      color: $text-dark;
+      border: none;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .nav__link {
+      color: $text-dark;
+
+      &:hover {
+        color: $text-blue;
+      }
+    }
+  }
+}
+
+//.nav > .nav__menu > .nav__item - так делать не надо!!!
+
+
+
+//@media screen and (min-width: 480px) {
+//
+//  .logo {
+//    margin: 10px 0;
+//
+//    &__text {
+//      font-size: 100px;
+//    }
+//  }
+//}
+//
+//@media screen and (min-width: 992px) {
+//
+//  .logo {
+//    margin: 30px 0;
+//  }
+//}

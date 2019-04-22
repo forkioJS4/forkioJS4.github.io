@@ -1,0 +1,427 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+  }
+  @import "../partials/hamburger";
+  .container {
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  .max-width-prorerty {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /*header properties*/
+
+  .header-background{
+    position: relative;
+    background-color: #27262a;
+  }
+
+  .header {
+    position: relative;
+    display: flex;
+    height: 104px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .block-logo {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+
+    &:hover {
+      filter: brightness(2);
+    }
+
+    &__pencil {
+      display: block;
+      background-image: url("../img/svg/pencil-outline-forkio-40.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 65px;
+      height: 40px;
+      padding-left: 6px;
+
+    }
+
+    &__title{
+      display: none;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: $first-font;
+      font-weight: bold;
+      color: rgb(141, 129, 172);
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+
+  }
+
+  .top-menu {
+    display: none;
+  }
+
+  .header-button {
+    margin-right: 6vw;
+  }
+
+  .button{
+    font-size: 15px;
+    font-family: $secondary-font;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(141, 129, 172);
+    border: none;
+    border-radius: 70px;
+    padding: 10px 25px;
+    text-decoration: none;
+
+      &:hover{
+        background-color: white;
+        color: rgb(141, 129, 172);
+      }
+
+      &--getnow {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 4vw 9.5vw;
+      }
+
+      &--tariff {
+        text-transform: uppercase;
+        font-weight: normal;
+        padding-left: 35px;
+        padding-right: 35px;
+        background-color: rgba(255, 255, 255, 0.149);
+      }
+
+  }
+
+  .nav-button {
+    padding: 15px;
+
+      &__first-line{
+        margin-top: 7px;
+        border-top: 3px solid white;
+        height: 7px;
+        width:20px;
+        margin-left: auto;
+      }
+
+      &__line{
+        border-top: 3px solid white;
+        height: 7px;
+        width:25px;
+      }
+
+    &:hover{
+      background-color: #8d81ac;
+    }
+
+      &:hover:after {
+        content: '\2716';
+      }
+  }
+
+  /*product section properties*/
+
+   .block-title{
+    font-size: calc(2em + 4.7vw);
+    font-family: $secondary-font;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 12% 0 5%;
+    text-transform: capitalize;
+
+      &:hover{
+        transform: scaleX(1.05);
+      }
+
+      &--h2{
+        padding: 15.5vw 10px 8vw 16px;
+        font-size: calc(2em + 1.1vw);
+        line-height: 15.5vw;
+      }
+
+      &--h3{
+        padding: 60px 25px 45px 25px;
+        font-size: calc(1em + 3.7vw);
+        line-height: 1.6;
+      }
+
+  }
+
+  .product {
+    background-color: #010005;
+
+    &__slogan {
+      display: block;
+      width: 89%;
+      margin: 0 auto;
+      font-size: calc(1em + 0.9vw);
+      font-family: $secondary-font;
+      color: rgb(141, 129, 172);
+      text-align: center;
+      text-transform: capitalize;
+      line-height: 10vw;
+      transform: scaleX(0.95);
+
+        &--uppercase {
+          text-transform: uppercase;
+          font-size: calc(0.8em);
+          line-height: 11vw;
+          color: rgb(132, 142, 151);
+          transform: none;
+          padding-bottom: 11vw;
+        }
+    }
+
+      &__image {
+        background: url("../img/for-app-320.png") no-repeat;
+        width: 100%;
+        //height: 118vw;
+        height: 410px;
+        background-position: center;
+      }
+  }
+
+  /*getnow section properties*/
+
+  .getnow{
+    font-family: $secondary-font;
+    position: relative;
+
+      &__button{
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%)
+      }
+
+      &__timelimit{
+        font-size: 14px;
+        color: rgb(132, 142, 151);
+        text-align: center;
+        margin: 10px;
+      }
+
+      &__title {
+        font-size: calc(1em + 3vw);
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.6;
+        padding: 35vw 35px 0 ;
+      }
+
+      &__text{
+        display: block;
+        font-size: 14px;
+        font-family: $first-font;
+        color: rgba(50, 50, 50, 0.8);
+        line-height:1.45;
+        text-align: center;
+        padding-top: 9px;
+      }
+
+      &__text--width-less{
+        padding: 0 28px 11px 28px;
+      }
+
+      &__visitor{
+           padding: 10px 25px 81px 32px;
+           width: 80%;
+           height: 90px;
+           display: flex;
+           align-content: space-around;
+           flex-flow: row wrap;
+           justify-content: space-around;
+         }
+   }
+
+  .counter{
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+
+      &__box {
+        border-right-color: #d5d5d5;
+        border-right-style: solid;
+        border-right-width: 1px;
+        background-color: #f3f3f3;
+        padding: 6px 10px;
+      }
+
+      &__count{
+        padding: 7px 10px 0 10px;
+        font-size: 10px;
+      }
+  }
+
+  /*testimonials section properties*/
+
+  .sections-background{
+    background-color: #4b3b4e;
+  }
+
+  .testimonials{
+    background: #4b3b4e url("../img/testimonials-fon-320.png") no-repeat;
+    background-position: 0 15px;
+    background-size: cover;
+  }
+
+  .feadback{
+    &__logo{
+      position: relative;
+      left: 50%;
+      transform: translate(-50%) scale(0.75);
+    }
+
+    &__text{
+      padding: 20px 30px 30px 20px ;
+      font-size: 15px;
+      font-family: $secondary-font;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-style: italic;
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+
+.testimonials-footer{
+    display: none;
+}
+
+  .articles-box::after{
+    display: block;
+    border-top: 2px solid #645766;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 8px;
+    content: "";
+  }
+
+  /*pricing section properties*/
+
+  .pricing {
+    background: #4b3b4e url("../img/prising-fon1-320.png") no-repeat;
+    background-position: 0 30%;
+    background-size: 100vw;
+  }
+
+  .tariffs{
+    padding-bottom: 80px;
+    /*opacity: 0;*/
+  }
+
+  .tariff{
+    width: 257px;
+    height: 457px;
+    background-color: rgba(255, 255, 255,0.11);
+    margin: 0 auto 15px;
+    font-family: $secondary-font;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+
+      &:active {
+        height: 560px;
+        width: 290px;
+        background-color: rgba(0, 0, 0,0.135);
+        font-size: 80px;
+      }
+
+      &--selected{
+        height: 560px;
+        width: 290px;
+        background-color: rgba(0, 0, 0,0.135);
+      }
+
+      &__header {
+        height: 100px;
+        background-color: rgba(255, 255, 255,0.059);
+        position: relative;
+
+        &--selected {
+          background-color: rgba(0, 0, 0,0.11);
+        }
+      }
+
+      &__title{
+        position: relative;
+        font-size: 25px;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translate(0,-50%);
+      }
+
+      &__currency{
+        padding-top: 27px;
+        font-size: 60px;
+
+        &--selected{
+          font-size: 80px;
+        }
+      }
+
+      &__price{
+        font-weight: bold;
+      }
+
+      &__desc{
+        padding-top: 21px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+
+        &::after{
+          display: block;
+          border-top: 4px solid #8d81ac;
+          margin: 36px 100px 30px 100px;
+          content: "";
+        }
+
+        &--selected::after{
+          margin: 41px 115px 40px 115px;
+        }
+      }
+
+      &__license{
+        font-size: 16px;
+        text-transform: capitalize;
+        line-height: 1.6;
+      }
+
+      &__button{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%);
+
+        &--selected{
+          bottom: 51px;
+
+          & .button--tariff{
+            font-size: 16px;
+            padding: 15px 50px;
+          }
+        }
+
+      }
+  }
