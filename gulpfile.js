@@ -9,12 +9,14 @@ const clean = require("gulp-clean");
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const gulpSequence = require('gulp-sequence');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("scss", function() {
   return gulp
     .src("./src/scss/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer(['last 15 versions' , '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist/css"));
 });
@@ -67,6 +69,6 @@ gulp.task('fonts', function() {
 
 gulp.task('dev', gulpSequence('clean', 'srv'));
 
-gulp.task('dist', gulpSequence('clean',["scss", "uglify", 'img','fonts']) );
+gulp.task('build', gulpSequence('clean',["scss", "uglify", 'img','fonts']) );
 
 gulp.task("default", ["dev"]);

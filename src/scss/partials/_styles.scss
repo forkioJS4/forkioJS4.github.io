@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
   }
-  @import "../partials/hamburger";
+
   .container {
     min-width: 320px;
     margin: 0 auto;
@@ -30,7 +30,6 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-
 
   .block-logo {
     display: flex;
@@ -59,10 +58,6 @@ body {
       font-family: $first-font;
       font-weight: bold;
       color: rgb(141, 129, 172);
-
-      &:hover{
-        transform: scale(1.1);
-      }
     }
 
   }
@@ -70,6 +65,8 @@ body {
   .top-menu {
     display: none;
   }
+
+@import "../partials/hamburger";
 
   .header-button {
     margin-right: 6vw;
@@ -143,10 +140,6 @@ body {
     text-align: center;
     padding: 12% 0 5%;
     text-transform: capitalize;
-
-      &:hover{
-        transform: scaleX(1.05);
-      }
 
       &--h2{
         padding: 15.5vw 10px 8vw 16px;
@@ -290,6 +283,7 @@ body {
       position: relative;
       left: 50%;
       transform: translate(-50%) scale(0.75);
+
     }
 
     &__text{
@@ -339,13 +333,6 @@ body {
     color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
-
-      &:active {
-        height: 560px;
-        width: 290px;
-        background-color: rgba(0, 0, 0,0.135);
-        font-size: 80px;
-      }
 
       &--selected{
         height: 560px;

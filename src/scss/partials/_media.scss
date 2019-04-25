@@ -168,7 +168,16 @@
 
   .menu-hamburger{
     display: none;
+
     }
+
+  .menu-hamburger--active,
+  .top-menu--humburger-active,
+  .top-menu__link--humburger-active {
+    display: none;
+  }
+
+
 
   .top-menu {
     display: block;
@@ -185,6 +194,11 @@
       font-family: $secondary-font;
       font-weight: bold;
       padding: 6px 1.8vw;
+
+      &--noneVision{
+        display: none;
+        //visibility: hidden;
+      }
     }
 
     &__item:hover {
@@ -196,6 +210,8 @@
       text-decoration: none;
       color: rgb(141, 129, 172);
     }
+
+
   }
 
 
@@ -272,7 +288,16 @@
     height: 200px;
     padding: 0 25px;
 
+      &__link {
+        display: block;
+        height: 40%;
+      }
+      &__logo{
+        align-content: center;
+      }
+
       &__text {
+        height: 50%;
         padding: 25px 0;
         font-weight: normal;
         font-size: 13px;
@@ -344,8 +369,14 @@
 
    .top-menu {
      &__item {
-       padding: 8px 5.8vw;
+       padding: 8px 4vw;
+
+       &--noneVision{
+         display: inline-block;
+         //visibility: hidden;
+       }
      }
+
    }
 }
 

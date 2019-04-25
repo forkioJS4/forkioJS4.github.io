@@ -1,4 +1,3 @@
-/* CORE STYLES */
  //$primary-color: transparentize();
  $overlay-color: rgba(41, 41, 41, 0.75);
  $menu-speed: 0.95s;
@@ -13,17 +12,6 @@
   padding: 25px;
 }
 
-.menu-hamburger__toggler {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-}
-
 .menu-hamburger__button {
   box-sizing: border-box;
   position: absolute;
@@ -33,7 +21,6 @@
   width: 60px;
   height: 60px;
   padding: 1rem;
-  //background: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +44,7 @@
 .menu-hamburger__line::after {
   content: '';
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   top: -10px;
   width: 100%;
   height: 2px;
@@ -69,10 +56,9 @@
   right: 0;
 }
 
-// почему не работаю классы напрямую?
-.menu-hamburger__toggler:checked + .menu-hamburger__button > .menu-hamburger__line::before{
-  width: 100%;
-}
+.menu-hamburger--active .menu-hamburger__line::before{
+    width: 100%;
+  }
 
   /* Moves Line Down */
 .menu-hamburger__line::after {
@@ -81,40 +67,38 @@
 
 /* Toggler Animation */
 
-.menu-hamburger__toggler:checked + .menu-hamburger__button > .menu-hamburger__line {
-  transform: rotate(135deg);
-}
-
+.menu-hamburger--active  .menu-hamburger__line {
+    transform: rotate(135deg);
+  }
 
 /* Turns Lines Into X */
-.menu-hamburger__toggler:checked + .menu-hamburger__button > .menu-hamburger__line:before,
-.menu-hamburger__toggler:checked + .menu-hamburger__button > .menu-hamburger__line:after {
+.menu-hamburger--active  .menu-hamburger__line:before,
+.menu-hamburger--active  .menu-hamburger__line:after {
   top: 0;
   transform: rotate(90deg);
 }
 
-/* Rotate On Hover When Checked */
-.menu-hamburger__toggler:checked:hover + .menu-hamburger__button > .menu-hamburger__line {
-  transform: rotate(225deg);
-}
+/* Rotate On Hover */
+.menu-hamburger--active:hover .menu-hamburger__line {
+    transform: rotate(225deg);
+  }
 
 /* Show Menu */
+.menu-hamburger--active .menu-hamburger__wrap1 {
+   visibility: visible;
+ }
 
-.menu-hamburger__toggler:checked ~ .menu-hamburger__wrap1 {
-  visibility: visible;
-}
+.menu-hamburger--active .menu-hamburger__wrap2 {
+   transform: scale(1);
+   transition-duration: $menu-speed;
+ }
 
-.menu-hamburger__toggler:checked ~ .menu-hamburger__wrap1 > .menu-hamburger__wrap2 {
-  transform: scale(1);
-  transition-duration: $menu-speed;
-}
-
-.menu-hamburger__toggler:checked ~ .menu-hamburger__wrap1 > .menu-hamburger__wrap2 > .menu-hamburger__wrap3 {
+.menu-hamburger--active .menu-hamburger__wrap3 {
   opacity: 1;
   transition:  opacity 0.4s ease 0.4s;
 }
 
-.menu-hamburger .menu-hamburger__wrap1 {
+.menu-hamburger__wrap1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -126,12 +110,9 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #010005;
-  font-family: "Montserrat-st";
-  color: rgb(255, 255, 255);
-  text-align: left;
 }
 
-.menu-hamburger .menu-hamburger__wrap2 {
+ .menu-hamburger__wrap2 {
   background: $overlay-color;
   border-radius: 50%;
   width: 200vw;
@@ -152,33 +133,46 @@
   max-height: 100vw;
   opacity: 0;
   transition: opacity 0.4s ease;
-  margin-left: -180px;
   margin-top: 17vw ;
 }
 
-// напрямую через класс не работает
-.menu-hamburger .menu-hamburger__wrap1 > div > nav > ul > li > a {
+.top-menu--humburger-active{
   display: block;
-  color: inherit;
+  position: absolute;
+  transform: translate(-50%);
+  width: 100%;
+  font-size: 16px;
+  font-family:  $secondary-font;
+  padding: 30px 1.8vw;
+  margin-top: 20px;
+  z-index: 100;
+
+}
+
+.top-menu__link--humburger-active{
+  display: block;
+  align-items: center;
+  color: white;
   text-decoration: none;
   transition: color 0.4s ease;
   background-color:rgba(141, 129, 172,0.5);
-  width: 140%;
+  width: 100vw;
   padding: 35px;
+  padding-left: 100px;
   border-top: 1px solid rgba(255,255,255,.3);
   font-size: 6vw;
 }
 
-.menu-hamburger .menu-hamburger__wrap1 > div > nav > ul > li > a:hover{
+.top-menu__link--humburger-active:hover{
   background-color: rgba(255,255,255, 0.6);
 }
 
-.menu-hamburger .menu-hamburger__wrap1 > div > nav > ul > li > a:active{
+.top-menu__link--humburger-active:active{
   background-color:rgba(255,255,255, 0.7);
   transition: all 0.1s step-start;
 }
 
- .menu-hamburger__wrap1 > div > nav > ul > li > a{
-  background-color:rgba(255,255,255,1);
-}
+// .top-menu__link--humburger-active{
+//  background-color:rgba(255,255,255,1);
+//}
 
