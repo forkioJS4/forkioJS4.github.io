@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const gulpSequence = require('gulp-sequence');
 const autoprefixer = require('gulp-autoprefixer');
+const minifyCSS = require('gulp-csso');
 
 gulp.task("scss", function() {
   return gulp
@@ -17,6 +18,8 @@ gulp.task("scss", function() {
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer(['last 15 versions' , '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(minifyCSS())
+    .pipe(rename('main.min.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist/css"));
 });
@@ -25,7 +28,6 @@ gulp.task("srv", ["scss","uglify",'img','fonts','clean'], function() {
   browserSync.init({
     server: "./"
   });
-
   gulp.watch("./src/scss/**/*.scss", ["scss"]).on("change", browserSync.reload);
   gulp.watch("./src/img/*.*", ["img"]).on("change", browserSync.reload);
   gulp.watch("./src/js/*.*", ["uglify"]).on("change", browserSync.reload);

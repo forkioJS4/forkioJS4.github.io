@@ -6,7 +6,6 @@ function hamburgerMenu(selector){
     let links = topMenu.getElementsByClassName('top-menu__link');
     let overlay =  hamburgerMenu.getElementsByClassName('menu-hamburger__wrap2')[0];
 
-
     button.addEventListener("click",(e) => {
         e.preventDefault();
         toggleMenu();
@@ -28,6 +27,7 @@ function hamburgerMenu(selector){
 
             hamburgerMenu.classList.toggle('menu-hamburger--active');
             topMenu.classList.toggle('top-menu--humburger-active');
+
             for (var i = 0; i < links.length; i++) {
                 links[i].classList.toggle('top-menu__link--humburger-active');
             }

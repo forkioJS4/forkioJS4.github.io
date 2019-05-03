@@ -3,176 +3,160 @@
  $menu-speed: 0.95s;
 
 /* MENU STYLES */
-
 .menu-hamburger {
   position: relative;
   top: 0;
   right: 10px;
   z-index: 1;
   padding: 25px;
-}
+  cursor: pointer;
 
-.menu-hamburger__button {
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  &__button {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
-/* Hamburger Line */
-.menu-hamburger__line {
-  position: relative;
-  flex: none;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-}
-
-/* Hamburger Lines - Top & Bottom */
-.menu-hamburger__line::before,
-.menu-hamburger__line::after {
-  content: '';
-  position: absolute;
-  z-index: 100;
-  top: -10px;
-  width: 100%;
-  height: 2px;
-  background: inherit;
-}
-
-.menu-hamburger__line::before{
-  width: 70%;
-  right: 0;
-}
-
-.menu-hamburger--active .menu-hamburger__line::before{
+  /* Hamburger Line */
+  &__line {
+    position: relative;
+    flex: none;
     width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+
+    /* Hamburger Lines - Top & Bottom */
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 100;
+      top: -10px;
+      width: 100%;
+      height: 2px;
+      background: inherit; }
+
+    &::before{
+      width: 70%;
+      right: 0; }
+
+    /* Moves Line Down */
+    &::after {
+      top: 10px; }
   }
 
-  /* Moves Line Down */
-.menu-hamburger__line::after {
-  top: 10px;
-}
+  &--active {
+
+   & .menu-hamburger__line::before{
+     width: 100%;  }
 
 /* Toggler Animation */
+    & .menu-hamburger__line {
+      transform: rotate(135deg);}
 
-.menu-hamburger--active  .menu-hamburger__line {
-    transform: rotate(135deg);
+  /* Turns Lines Into X */
+    & .menu-hamburger__line:before,
+    & .menu-hamburger__line:after {
+      top: 0;
+      transform: rotate(90deg); }
+
+  /* Rotate On Hover */
+    &:hover .menu-hamburger__line {
+        transform: rotate(225deg); }
+
+  /* Show Menu */
+    & .menu-hamburger__wrap1 {
+       visibility: visible; }
+
+    & .menu-hamburger__wrap2 {
+       transform: scale(1);
+       transition-duration: $menu-speed; }
+
+    & .menu-hamburger__wrap3 {
+      opacity: 1;
+      transition:  opacity 0.4s ease 0.4s; }
   }
 
-/* Turns Lines Into X */
-.menu-hamburger--active  .menu-hamburger__line:before,
-.menu-hamburger--active  .menu-hamburger__line:after {
-  top: 0;
-  transform: rotate(90deg);
-}
+  &__wrap1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #010005; }
 
-/* Rotate On Hover */
-.menu-hamburger--active:hover .menu-hamburger__line {
-    transform: rotate(225deg);
+  &__wrap2 {
+    background: $overlay-color;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease; }
+
+  &__wrap3 {
+    position: relative;
+    top: 0;
+    text-align: center;
+    max-width: 100vw;
+    max-height: 100vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin-top: 17vw ; }
+
+  } // end menu-hamburger
+
+ /* Show Top Menu */
+.top-menu {
+
+  &--humburger-active {
+    display: block;
+    position: absolute;
+    //transform: translate(-50%);
+    width: 100%;
+    font-size: 16px;
+    font-family: $secondary-font;
+    left: -60vw;
+    top: -240px;
+    z-index: 100; }
+
+  &__link--humburger-active {
+    display: block;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    background-color: rgba(141, 129, 172, 0.5);
+    width: 100vw;
+    padding: 35px;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    font-size: 6vw;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.6); }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.7);
+      transition: all 0.1s step-start; }
   }
-
-/* Show Menu */
-.menu-hamburger--active .menu-hamburger__wrap1 {
-   visibility: visible;
- }
-
-.menu-hamburger--active .menu-hamburger__wrap2 {
-   transform: scale(1);
-   transition-duration: $menu-speed;
- }
-
-.menu-hamburger--active .menu-hamburger__wrap3 {
-  opacity: 1;
-  transition:  opacity 0.4s ease 0.4s;
 }
-
-.menu-hamburger__wrap1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #010005;
-}
-
- .menu-hamburger__wrap2 {
-  background: $overlay-color;
-  border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
-}
-
-.menu-hamburger__wrap3 {
-  position: relative;
-  top: 0;
-  text-align: center;
-  max-width: 100vw;
-  max-height: 100vw;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  margin-top: 17vw ;
-}
-
-.top-menu--humburger-active{
-  display: block;
-  position: absolute;
-  transform: translate(-50%);
-  width: 100%;
-  font-size: 16px;
-  font-family:  $secondary-font;
-  padding: 30px 1.8vw;
-  margin-top: 20px;
-  z-index: 100;
-
-}
-
-.top-menu__link--humburger-active{
-  display: block;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  transition: color 0.4s ease;
-  background-color:rgba(141, 129, 172,0.5);
-  width: 100vw;
-  padding: 35px;
-  padding-left: 100px;
-  border-top: 1px solid rgba(255,255,255,.3);
-  font-size: 6vw;
-}
-
-.top-menu__link--humburger-active:hover{
-  background-color: rgba(255,255,255, 0.6);
-}
-
-.top-menu__link--humburger-active:active{
-  background-color:rgba(255,255,255, 0.7);
-  transition: all 0.1s step-start;
-}
-
-// .top-menu__link--humburger-active{
-//  background-color:rgba(255,255,255,1);
-//}
 

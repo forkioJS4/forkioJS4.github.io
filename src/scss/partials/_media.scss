@@ -3,7 +3,6 @@
   .product__image{
     background-image: url("../img/for-app-480.png");
   }
-
 }
 
 @media only screen and (min-width: 481px) {
@@ -11,7 +10,6 @@
   .product__image{
     background-image: url("../img/for-app-768.png");
   }
-
 }
 
 @media only screen and (min-width: 401px) {
@@ -38,7 +36,6 @@
         font-size: 15px;
         padding-left: 37px;
         padding-right: 37px;
-
       }
   }
 
@@ -65,6 +62,7 @@
   }
 
   .product {
+
     &__slogan {
       line-height: 7.5vw;
 
@@ -118,7 +116,6 @@
   }
 
   /*testimonials section properties*/
-
   .feadback__text {
     padding: 20px 63.7px 50px 63.7px;
     font-size: 15px;
@@ -140,49 +137,102 @@
 
 @media only screen and (min-width: 481px) {
 
+  body {
+    overflow: visible;
+  }
   .header {
     flex-flow: column wrap;
     justify-content: space-between;
     height: 120px;
-  }
-  .header-button {
-    margin-right: 0;
+
+    &-button {
+      margin-right: 0;
+      padding-top: 22px;
+      position: absolute;
+      right: 20px;
+      z-index: 300;
+    }
   }
 
   .block-logo {
     position: absolute;
     left: 0;
     top: 23px;
-
-  }
-
-  .header-button{
-    padding-top: 22px;
-    position: absolute;
-    right: 20px;
+    z-index: 301;
   }
 
   .button{
     padding: 10px 35px ;
   }
 
-  .menu-hamburger{
-    display: none;
-
-    }
-
-  .menu-hamburger--active,
-  .top-menu--humburger-active,
-  .top-menu__link--humburger-active {
+  .menu-hamburger__button{
     display: none;
   }
 
+  .top-menu {
 
+    &--humburger-active {
+      padding: 0;
+      margin-top: 0;
+      margin-left: 62%;
+    }
+
+    &__link--humburger-active {
+      display: inline;
+      transition: none;
+      background-color: rgba(141, 129, 172, 0);
+      padding: 0;
+      border-top: none;
+      font-size: 16px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0);
+        transition: none;
+      }
+    }
+  }
+
+  .menu-hamburger {
+
+    &__wrap1 {
+      position: relative;
+      top: -20px;
+      left: 45%;
+      width: 100%;
+      height: 100%;
+      visibility: visible;
+      overflow: visible;
+      display: inline-block;
+      border: none;
+    }
+
+    &__wrap2 {
+      background: none;
+      border-radius: 0;
+      width: 100vw;
+      height: 100vw;
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      transform: scale(1);
+    }
+
+    &__wrap3 {
+      opacity: 1;
+      margin: 0;
+    }
+  }
 
   .top-menu {
+    width: 100%;
+    visibility: visible;
     display: block;
     position: absolute;
-    top: 80px;
+    top: 70px;
     transform: translate(-50%);
     width: 100%;
     text-align: center;
@@ -197,7 +247,6 @@
 
       &--noneVision{
         display: none;
-        //visibility: hidden;
       }
     }
 
@@ -210,27 +259,16 @@
       text-decoration: none;
       color: rgb(141, 129, 172);
     }
-
-
   }
-
-
 
   .nav-button {
     display: none;
   }
 
   /*product*/
-
   .block-title{
     font-size: calc(2em + 5.2vw);
     padding: 5.5% 0 2%;
-  }
-
-  .product {
-    &__image {
-      //height: 56vw;
-    }
   }
 
   .button--getnow {
@@ -258,9 +296,10 @@
       padding-bottom: 8%;
     }
   }
-  /*testimonials section properties*/
 
+  /*testimonials section properties*/
   .block-title {
+
     &--h2 {
       padding-top: 6%;
       font-size: calc(1em + 3.4vw);
@@ -277,7 +316,6 @@
     flex-flow: wrap;
     justify-content: center;
     padding-top: 5%;
-    //height: 600px;
 
       &::after{
         display: none;
@@ -302,7 +340,6 @@
         font-weight: normal;
         font-size: 13px;
       }
-
   }
 
   .pricing {
@@ -343,6 +380,7 @@
 }
 
 @media only screen and (min-width: 600px) {
+
   .top-menu{
     &__item {
       padding: 8px 4vw;
@@ -373,7 +411,6 @@
 
        &--noneVision{
          display: inline-block;
-         //visibility: hidden;
        }
      }
 
@@ -394,10 +431,7 @@
 
   .header-button{
     padding: 0;
-    //padding-right: 10px;
-    //margin: 0;
-    //margin-right: -30px;
-    position: relative;
+    order: 1;
   }
 
   .button{
@@ -408,20 +442,29 @@
       padding: 20px 60px;
     }
   }
+
+  .menu-hamburger__wrap2 {
+    width: 100%;
+    height: 100%;
+  }
+
+
   .top-menu{
     padding: 0;
     margin: 0;
+    margin-top: -120px;
+    left: -110px;
+    margin-left: auto;
     text-align: left;
-    //padding-top: 3px;
-    //padding-right: 10px;
     position: relative;
-    top: 0px;
-    transform: none;
-    width: 100%;
     text-align: justify;
 
       &__item {
-        padding: 9px 1.8vw;
+        padding: 9px 1.6vw;
+      }
+
+      &--humburger-active{
+        left: 0;
       }
   }
 
@@ -543,6 +586,11 @@
 }
 
 @media only screen and (min-width: 1004px) {
+
+  .top-menu{
+    left: -130px;
+  }
+
   .tariffs{
     padding: 0;
   }
@@ -564,7 +612,14 @@
         padding: 40px 0 60px 0;
         font-size: 48px;
       }
-}
+    }
+
+  .top-menu{
+    margin-left: 200px;
+    &__item {
+      padding: 9px 30px;
+    }
+  }
 
   .product {
     &__slogan {
@@ -598,7 +653,7 @@
       font-size: 1.3em;
       line-height: 1.6;
       text-align: center;
-      padding: 1vw 10vw 0 10vw;
+      padding: 20px 150px 0 150px;
     }
 
     &__visitor {
@@ -610,44 +665,13 @@
 
   .articles-box{
     padding-top: 20px;
-
-    //&::after{
-    //  display: none;
-    //}
   }
 
-  //.feadback{
-  //  width: 330px;
-  //  height: 200px;
-  //  padding: 0 0px;
-  //
-  //  &__text {
-  //    padding-bottom: 3px;
-  //  }
-  //}
+  .block-title--h2 {
+    line-height: 156px;
+  }
 
-  //.tariffs{
-  //  display: flex;
-  //  flex-flow: wrap;
-  //  justify-content: center;
-  //}
-
-//  .tariff{
-//    margin: 45px 20px;
-//
-//    &--selected{
-//      margin: 0;
-//    }
-//  }
-//
-//
-//  .testimonials-footer{
-//    padding: 4vw 14vw 0 14vw;
-//
-//    &::after{
-//      padding: 0;
-//      margin: 18px -8px 0 -8px;
-//      content: "";
-//    }
-//  }
+  .testimonials-footer {
+    padding:30px 200px 0 200px;
+  }
 }

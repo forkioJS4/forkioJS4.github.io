@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./dist/img/forkio-favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>StepProject 2-1</title>
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 <body>
 
@@ -17,21 +17,12 @@
     <div class="header-background">
 
         <header class="header max-width-prorerty" id="header">
+            <a href="#pricing" class="block-logo" >
 
-            <div class="block-logo">
-                <div class="block-logo__pencil"></div>
-                <p class="block-logo__title">forkio</p>
-            </div>
+                    <div class="block-logo__pencil"></div>
+                    <p class="block-logo__title">forkio</p>
 
-            <nav >
-                <ul class="top-menu "> <!--top-menu--humburger-active-->
-                    <li class="top-menu__item top-menu__item--noneVision" ><a class="top-menu__link" hreVi"#header">Home</a></li>
-                    <li class="top-menu__item" ><a class="top-menu__link" href="#product">Owerview</a></li>
-                    <li class="top-menu__item"><a class="top-menu__link" href="#getnow" >About Fork</a></li>
-                    <li class="top-menu__item"><a class="top-menu__link" href="#testimonials" >Buying Options</a></li>
-                    <li class="top-menu__item"><a class="top-menu__link" href="#pricing" >Support</a></li> <!--top-menu__link--humburger-active-->
-                </ul>
-            </nav>
+            </a>
 
             <div class="header-button">
                 <button class="button" value="Buy Now" href="#">Buy Now</button>
@@ -45,7 +36,15 @@
 
                 <div class="menu-hamburger__wrap1">
                     <div class="menu-hamburger__wrap2">
-                        <div class="menu-hamburger__wrap3">  </div>
+                        <nav class="menu-hamburger__wrap3">
+                            <ul class="top-menu "> <!--top-menu--humburger-active-->
+                                <li class="top-menu__item top-menu__item--noneVision" ><a class="top-menu__link" href="#header">Home</a></li>
+                                <li class="top-menu__item"><a class="top-menu__link" href="#product">Owerview</a></li>
+                                <li class="top-menu__item"><a class="top-menu__link" href="#getnow" >About Fork</a></li>
+                                <li class="top-menu__item"><a class="top-menu__link" href="#testimonials" >Buying Options</a></li>
+                                <li class="top-menu__item"><a class="top-menu__link" href="#pricing" >Support</a></li> <!--top-menu__link--humburger-active-->
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -53,7 +52,6 @@
         </header>
     </div>
     <main class="content">
-
 
         <section class="product" id="product">
 
